@@ -1,16 +1,27 @@
 # InterviewPractice
-Answer the interview questions as if answering them in an interview for a specific job.
+Answer the interview questions as if answering them in an interview for a specific job.(6 total)
 
-##Example Job Post
-Software Engineer  
-San Jose, California  
-Requisition Number R0015168  
-Subsidiary eBay    
-Looking for a company that inspires passion, courage and imagination, where you can be part of the team shaping the future of global commerce? Want to shape how millions of people buy, sell, connect, and share around the world? If you’re interested in joining a purpose driven community that is dedicated to creating an ambitious and inclusive workplace, join eBay – a company you can be proud to be a part of.  
-* Expert knowledge in developing high performance and scalable web applications.
-* Expert knowledge in object-oriented and functional programming, reactive and asynchronous design patterns.
-* Experience in developing extensible APIs and highly maintainable services.
-* Strong Object Oriented design methodology and experience using Java,  JSP, JDBC and ability to learn new languages as needed.
-* In-depth understanding of web services and SOA related standards like REST/OAuth/JSON.
-* Excellent knowledge of high-level programming languages, e.g. Java, Node.js, Python
-* Excellent communication and writing skills.
+Explaining and justifying your answer with two to three paragraphs as you see fit. For coding answers, explain the relevant choices you made writing the code.
+
+1. What is the most influential book or blog post you’ve read regarding web development?
+2. Tell me about a web application you have built. Why did you choose to build it? What did you learn? What challenges did you face and how did you overcome them?
+3. Write a function in Python that takes a list of strings and returns a single string that is an HTML unordered list (<ul>...</ul>) of those strings. You should include a brief explanation of your code. Then, what would you have to consider if the original list was provided by user input?
+4. List 2-3 attacks that web applications are vulnerable to. How do these attacks work? How can we prevent those attacks?
+5. Here is some starter code for a Flask Web Application. Expand on that and include a route that simulates rolling two dice and returns the result in JSON. You should include a brief explanation of your code.
+  ```
+from flask import Flask
+app = Flask(__name__)
+
+import json
+import random
+
+@app.route('/')
+def hello_world():
+return 'Hello World!'
+
+if __name__ == '__main__':
+app.debug = True
+app.run()
+
+  ```
+6. If you were to start your full-stack developer position today, what would be your goals a year from now?
