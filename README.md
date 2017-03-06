@@ -11,7 +11,7 @@ from the FourSquare and Wikipedia APIs. I learned how design patterns assist in 
 a manageable codebase and how frameworks can decrease the time required developing an application and provide a number of utilities for me to use. I also learned to implement third-party APIs that provide valuable data sets that can improve the quality of my application. I used knockout framework, which is new to me. I had to hard time to apply it
 and make all data incorporated correctly for display. I read carefully about the help documentation of knockout about data-bind and also get help from experienced people.
 
-###3. Write a function in Python that takes a list of strings and returns a single string that is an HTML unordered list (<ul>...</ul>) of those strings. You should include a brief explanation of your code. Then, what would you have to consider if the original list was provided by user input?
+###3. Write a function in Python that takes a list of strings and returns a single string that is an HTML unordered list of those strings. You should include a brief explanation of your code. Then, what would you have to consider if the original list was provided by user input?
 ```Python
 def unordered_list(strings):
   """
