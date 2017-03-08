@@ -14,24 +14,24 @@ and make all data incorporated correctly for display. I read carefully about the
 ###3. Write a function in Python that takes a list of strings and returns a single string that is an HTML unordered list of those strings. You should include a brief explanation of your code. Then, what would you have to consider if the original list was provided by user input?
 ```Python
 def unordered_list(strings):
-  """
-  :type strings: List[str]
-  :rtype: str
-  #This function returns an html unordered list.
-  """
-  # creating the left side of unordered list tag
+    """
+    :type strings: List[str]
+    :rtype: str
+    #This function returns an html unordered list.
+    """
+    # creating the left side of unordered list tag
 
-  lst = '<ul>'
+    lst = '<ul>'
 
-  # for loop : iterate over strings
-  for s in strings:
+    # for loop : iterate over strings
+    for s in strings:
 
-    # append list item tag with contents of one element in strings
-    lst += '<li>%s</li>' % s
+        # append list item tag with contents of one element in strings
+        lst += '<li>%s</li>' % s
 
-  # append right side of unordered list tag
-  lst += '</ul>'
-  return lst
+    # append right side of unordered list tag
+    lst += '</ul>'
+    return lst
 
 ```
 
@@ -73,39 +73,37 @@ I've added the functionality to roll two dice and return the result as a json st
   I've included the ability to pass the number of sides the dice have to the function since it wasn't specified and expands the functionality.
   The result of each die roll is assigned to a variable. The function returns the results of json.dumps(), sorted by key.
   ```python
+
   from flask import Flask
   app = Flask(__name__)
 
   import json
   import random
 
-
   @app.route('/')
   def hello_world():
-    return 'Hello World!'
+      return 'Hello World!'
 
   # Create the route
   @app.route('/roll_dices/json')
-
   def roll_dices():
+      """
+      :rtype: str
+      #This function rolls two dices and returns the result in json format
+      """
 
-    """
-    :rtype: str
-    #This function rolls two dices and returns the result in json format
-    """
+      # Assign the result of the dice roll, assuming the dice has six sides.
+      # dice 1
+      dice1 = random.randint(1, 6)
+      # dice 2
+      dice2 = random.randint(1, 6)
 
-    # Assign the result of the dice roll, assuming the dice has six sides.
-    #dice 1
-    dice1 = random.randint(1,6)
-    #dice 2
-    dice2 = random.randint(1,6)
-
-    # Return the results of the dice rolled as json string, sorted by key
-    return json.dumps({'dice1': dice1, 'dice2': dice2}, sort_keys=True)
+      # Return the results of the dice rolled as json string, sorted by key
+      return json.dumps({'dice1': dice1, 'dice2': dice2}, sort_keys=True)
 
   if __name__ == '__main__':
-    app.debug = True
-    app.run()
+      app.debug = True
+      app.run()
 
   ```
 
