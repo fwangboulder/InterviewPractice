@@ -6,7 +6,7 @@
 I have been reading the full stack python by Matthew Makai, a Developer Evangelist. This is mainly my guidance book because it gives short descriptions about all concepts in web development and provides rich resources links for me to follow. I have to say this is the book opening the door of web development for me.  Together with this full stack web developer program, I have been addicted to build awesome web apps. I will keep using this book as a tool to learn more about emerging web technologies and improve my skills of web development in future.   
 
 ###2. Tell me about a web application you have built. Why did you choose to build it? What did you learn? What challenges did you face and how did you overcome them?
-I built a web application featuring a map of my neighborhood trails. Users can search all included landmarks and when selected, additional information about this landmark is presented from the FourSquare and Wikipedia APIs. Google Map was loaded into my site by adding three things into my code: some css to specify map to be 100% the height of page, a html div with ID=map and a script line into my HTML to load the Google Map API. This loads the JavaScript definitions asynchronously when the page starts loading. From this project, I learned how design patterns assist in developing a manageable codebase and how frameworks can decrease the time required developing an application and provide a number of utilities for me to use. I also learned to implement third-party APIs that provide valuable data sets that can improve the quality of my application. I used knockout framework, which is new to me. I had to hard time to apply it and make all data incorporated correctly for display. I read carefully about the help documentation of knockout about data-bind and also get help from experienced people.
+I built a web application featuring a map of my neighborhood trails. Users can search all included landmarks and when selected, additional information about this landmark is presented from the FourSquare and Wikipedia APIs. Google Map was loaded into my site by adding three things into my code: some css to specify map to be 100% the height of page, a html div with ID=map and a script line into my HTML to load the Google Map API. This loads the JavaScript definitions asynchronously when the page starts loading. From this project, I learned how design patterns assist in developing a manageable codebase and how frameworks can decrease the time required developing an application and provide a number of utilities for me to use. I also learned to implement third-party APIs that provide valuable data sets that can improve the quality of my application. I used knockout framework, which is new to me. I had a hard time to apply it and make all data incorporated correctly for display. I finally figured it out by reading carefully the help documentation of knockout about data-bind and also getting help from experienced people.
 
 ###3. Write a function in Python that takes a list of strings and returns a single string that is an HTML unordered list of those strings. You should include a brief explanation of your code. Then, what would you have to consider if the original list was provided by user input?
 ```Python
@@ -32,7 +32,7 @@ def unordered_list(strings):
 
 ```
 
-If the original list was provided by user input, I need to check if the input is efficient first. The function should be able to check whether the input is a list, and whether the list contains strings. Since the output is an html unordered list, html escaping needs to be considered. The cgi module that comes with Python has an escape() function.
+If the original list was provided by user input, I need to check if the input is efficient first. The function should be able to check whether the input is a list, and whether the list contains strings. Since the output is an html unordered list, html escaping also needs to be considered. The cgi module that comes with Python has an escape() function.
 
 ###4. List 2-3 attacks that web applications are vulnerable to. How do these attacks work? How can we prevent those attacks?
 * Injections let attackers modify a back-end statement of command through unsanitized
@@ -60,15 +60,12 @@ app.debug = True
 app.run()
 
   ```
-First I need to do is to add a new route @app.route('/roll_dices/json')  
+First I need to do is to add a new route @app.route('/roll_dices/json').  
 Then I need to create a function which can roll two dices, return the result as a json
-format. I need to import two modules: json and random.
-
-
-
+format. I need to import two modules: json and random.  
 I've added the functionality to roll two dice and return the result as a json string.
-  I've included the ability to pass the number of sides the dice have to the function since it wasn't specified and expands the functionality.
-  The result of each die roll is assigned to a variable. The function returns the results of json.dumps(), sorted by key.
+I've included the ability to pass the number of sides the dice have to the function since it wasn't specified and expands the functionality.
+The result of each die roll is assigned to a variable. The function returns the results of json.dumps(), sorted by key.
   ```python
 
   from flask import Flask
